@@ -397,6 +397,11 @@ export function StakingApp() {
         <div className="staking-header">
           <h2 className="staking-title">Private staking</h2>
           <p className="staking-subtitle">Connect your wallet to mint, stake, and harvest confidential yield.</p>
+          <ul className="staking-highlights">
+            <li>1% daily interest that compounds automatically</li>
+            <li>Encrypted balances and rewards powered by Zama FHEVM</li>
+            <li>Withdraw and claim at any moment with no lock-ups</li>
+          </ul>
         </div>
         <div className="feedback-message feedback-warning">
           Please connect your wallet using the button in the header to get started.
@@ -412,6 +417,11 @@ export function StakingApp() {
           <div>
             <h2 className="staking-title">fTEST staking dashboard</h2>
             <p className="staking-subtitle">Stake to earn 1% daily interest, paid in fTEST.</p>
+            <ul className="staking-highlights">
+              <li>Encrypted balances never leave your custody</li>
+              <li>Rewards accrue every full day without claiming</li>
+              <li>Instant minting, staking, unstaking, and claiming flows</li>
+            </ul>
           </div>
           <button
             type="button"
@@ -443,21 +453,25 @@ export function StakingApp() {
 
       <section className="metrics-grid">
         <div className="metric-card">
+          <span className="metric-icon" aria-hidden="true">💼</span>
           <span className="metric-label">Wallet balance</span>
           <span className="metric-value">{formatDisplay(walletRaw)} fTEST</span>
           <span className="metric-footnote">Tokens available to stake</span>
         </div>
         <div className="metric-card">
+          <span className="metric-icon" aria-hidden="true">🛡️</span>
           <span className="metric-label">Staked principal</span>
           <span className="metric-value">{formatDisplay(stakedRaw)} fTEST</span>
           <span className="metric-footnote">Currently deposited in NightVault</span>
         </div>
         <div className="metric-card">
+          <span className="metric-icon" aria-hidden="true">🎁</span>
           <span className="metric-label">Accrued rewards</span>
           <span className="metric-value">{formatDisplay(rewardsRaw)} fTEST</span>
           <span className="metric-footnote">Ready to claim now</span>
         </div>
         <div className="metric-card">
+          <span className="metric-icon" aria-hidden="true">📈</span>
           <span className="metric-label">Projected claim</span>
           <span className="metric-value">{formatDisplay(pendingRaw)} fTEST</span>
           <span className="metric-footnote">Includes earned interest for completed days</span>
